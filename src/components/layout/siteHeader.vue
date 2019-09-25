@@ -199,7 +199,7 @@ body {
     line-height: 60px;
     margin: 0;
     border-bottom: 2px solid transparent;
-    color: #909399;
+    color: #555555;
     font-size: 16px;
 }
 .siteHeader .el-avatar.el-avatar--circle {

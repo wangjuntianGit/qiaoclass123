@@ -197,6 +197,8 @@
     </div>
     <div class="fullscreen">
       <input type="button" class="btn-exit-fullscreen" value="退出全屏" />
+      <div @click="prevBtn" class="upPage"><i class="el-icon-arrow-left"></i></div>
+      <div @click="nextBtn" class="downPage"><i class="el-icon-arrow-right"></i></div>
     </div>
     <div class="del-menu-tips-wapper">
       <el-dialog title="删除" :visible.sync="delMenuDialogVisible" width="550px" center>

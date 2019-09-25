@@ -1,7 +1,7 @@
 .bodyright{width: 100%;}
 .listbox{margin-top: 10px; background: #fff; border-radius: 8px; box-shadow: #ced2d1 0px 0px 10px 0px;padding:12px 0px 12px 6px;margin-bottom: 20px;}
 /*滚动条凹槽的颜色，还可以设置边框属性*/
-::-webkit-scrollbar-track-piece{background-color:#fff;}
+/*::-webkit-scrollbar-track-piece{background-color:#fff;}*/
 /*滚动条的宽度*/
 ::-webkit-scrollbar{width:5px;height:5px;border-radius: 12px;}
 /*滚动条的设置*/

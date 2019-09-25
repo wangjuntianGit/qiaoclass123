@@ -56,7 +56,6 @@ import Comment from '@/components/common/Comment'
 import { setInterval } from 'timers'
 export default {
   name: 'movie',
-  mixins:[Common],
   data () {
     return {
       detailList: '',
