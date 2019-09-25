@@ -1,0 +1,664 @@
+.bodyright{width: 100%;}
+.listbox{margin-top: 10px; background: #fff; border-radius: 8px; box-shadow: #ced2d1 0px 0px 10px 0px;padding:12px 0px 12px 6px;margin-bottom: 20px;}
+/*滚动条凹槽的颜色，还可以设置边框属性*/
+::-webkit-scrollbar-track-piece{background-color:#fff;}
+/*滚动条的宽度*/
+::-webkit-scrollbar{width:5px;height:5px;border-radius: 12px;}
+/*滚动条的设置*/
+::-webkit-scrollbar-thumb{background-color:#dddddd;background-clip:padding-box;min-height:28px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover{background-color:#bbb;}
+[v-cloak] {  display: none;}
+/* el样式修改 */
+.el-select .el-input .el-select__caret{color:#fff;}
+.el-input--suffix .el-input__inner {
+    padding-right:0px;
+}
+.el-input__icon{line-height: 0px;}
+.el-select .el-input.is-disabled .el-input__inner:hover {
+    border-color: #31bc90;
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+    border-color: #31bc90;
+}
+.el-select .el-input__inner:focus , .el-select:hover .el-input__inner{border-color: #31bc90;}
+
+.search .el-select>.el-input{font-weight: bold;font-size: 16px;}
+.el-card__body{padding:0;}
+.ptcontent{margin-bottom: 20px;}
+.ptcontent .el-card {
+    border: 1px solid #D4D4D4;
+    background-color: #FFF;
+    color: #303133;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.pttxt .ptname{font-size: 14px;margin:4px auto;text-align: center;}
+.author{font-size: 12px;text-align: center;color:#999;margin:6px auto;}
+.el-card{border-radius:6px;padding:6px 6px 6px 6px;}
+.pttxthover{display: flex;flex:1;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    flex-flow: column;
+}
+.pttxthover .el-button.is-round {
+    border-radius: 16px;
+    padding: 4px 14px;
+}
+.pttxthover .el-button--warning {
+    color: #FFF;
+    background-color: #31bc90;
+    border-color: #31bc90;
+}
+.pttxthover .el-row{margin-bottom: 4px;margin-top: 4px;}
+.share{padding:2px 0;color:#999;}
+.share span{display: inline-block;font-size:14px;background: #fff;text-align: center;}
+.share  span.dia_span span{background: none;}
+.share  span.dia_span .el-dialog{
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.share i{cursor: pointer;}
+.imgwrap{position: relative; width:100%; background: #ececec;}
+.imgbox {width:100%;height:150px;}
+.ptname>div{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: center;}
+.el-button--text,.el-button--text:focus,.el-button--text:hover {
+    color:#222;}
+.el-radio-button__inner{border:none!important;}
+.el-radio-button__inner:hover{background:#31bc90;color: #fff;}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    color: #FFF;
+    background-color: #31bc90;
+    border-color: #FFF;
+    -webkit-box-shadow: -1px 0 0 0 #FFF;
+    box-shadow: -1px 0 0 0 #FFF;
+}
+.el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
+    -webkit-box-shadow: 0 0 2px 2px #fff;
+    box-shadow: 0 0 2px 2px #fff;
+}
+
+.el-radio-button__inner {
+    font-size: 16px;
+}
+.el-radio-button.is-active{border:none;}
+.xxm-heart:before {
+    color: #999;
+}
+.el-icon-share:before {
+    color: #999;
+}
+.titleShow{
+    color:#31bc90;
+    /* font-weight: 600; */
+}
+.sort .el-button{border:none;padding:0 11px;height: 34px;line-height: 34px;margin-top:3px;cursor:pointer;}
+.sortclick{color: #31bc90;font-weight: 800;}
+.sort .el-button:focus, .sort .el-button:hover{background: #31bc90;color: #fff;}
+.list-search{margin-bottom: 18px;}
+.list-search .el-input__inner{background: none;border:1px solid #DCDFE6;color:#222}
+.el-dialog__headerbtn .el-dialog__close {
+    color: #909399;
+    cursor: pointer;
+}
+.list-search input[type=text]{
+    color:#999;
+}
+.el-dialog__wrapper{top:0px;}
+.delname{text-align: center;}
+.myresource .el-dialog__wrapper input[type=text]{color:#fff;}
+.el-radio-button--medium .el-radio-button__inner {
+    padding: 10px 11px;
+    font-size: 14px;
+    border-radius: 0;
+}
+#boxbox>.el-row>.el-col[class*=el-col-] {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.el-input__suffix{right:0;}
+
+
+.myresource {
+  position: relative;
+}
+.myresource .sort_new {
+  margin-top: 6px;
+  margin-left: 12px;
+}
+.myresource .sort_new span {
+  height: 34px;
+  line-height: 34px;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 0 4px;
+  cursor: pointer;
+}
+.myresource .imgwrap {
+  margin: 0 auto;
+  width: 100%;
+}
+.myresource .el-main,.el-aside {
+  padding: 0px 10px;
+}
+.myresource .el-pager li {
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+}
+.myresource .el-select .el-input .el-select__caret {
+  color: #fff;
+}
+.myresource .el-input--suffix .el-input__inner {
+  padding-right: 0px;
+}
+.myresource .el-input__icon {
+  line-height: 0px;
+  width: 12px;
+}
+.myresource .el-select .el-input.is-disabled .el-input__inner:hover {
+  border-color: #31bc90;
+}
+.myresource .el-select .el-input.is-focus .el-input__inner {
+  border-color: #31bc90;
+}
+.myresource .el-select .el-input__inner:focus,
+.myresource .el-select:hover .el-input__inner {
+  border-color: #31bc90;
+}
+.myresource .el-button--text,
+.myresource .el-button--text:focus,
+.myresource  .el-button--text:hover {
+  color: #222;
+}
+.myresource .el-radio-button__inner {
+  border: none !important;
+  color: #3b3b3b;
+}
+.myresource .el-select .el-input__inner {
+  padding-right: 0px;
+}
+.myresource .screenSort {
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: #ced2d1 0px 0px 10px 0px;
+  font-size: 14px;
+  padding-left: 16px;
+}
+.myresource .screenSort .fen {
+  font-size: 16px;
+}
+.myresource .screenSort .el-select-dropdown__item.selected {
+  color: #31bc90;
+  font-weight: 400;
+}
+.myresource .screenSort .el-radio-group {
+  height: 60px;
+  line-height: 60px;
+  margin-right: 10px;
+}
+.myresource .screenSort span i {
+  cursor: pointer;
+}
+.myresource .screenSort .el-radio-button__inner:hover {
+  background: #fff;
+  color: #606266;
+}
+.myresource .screenSort .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  color: #31bc90;
+  font-weight: 800;
+  background: none;
+  border-color: #fff;
+  box-shadow: none;
+}
+.myresource .screenSort .el-radio-button.is-active.is-focus {
+  color: #31bc90;
+}
+/*样式优化*/
+.el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
+  -webkit-box-shadow: 0 0 2px 2px #fff;
+  box-shadow: 0 0 2px 2px #fff;
+}
+.el-radio-button__inner {
+  font-size: 16px;
+}
+.el-radio-button.is-active {
+  border: none;
+}
+.xxm-heart:before ,.el-icon-share:before{
+  color: #999;
+}
+.titleShow {
+  color: #31bc90;
+}
+.sort .el-button {
+  border: none;
+  padding: 0 11px;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 3px;
+}
+.sort .el-button:focus,
+.sort .el-button:hover {
+  background: #31bc90;
+  color: #fff;
+}
+.list-search {
+  margin-bottom: 18px;
+}
+.list-search .el-input__inner {
+  background: none;
+  border: 1px solid #dcdfe6;
+  color: #222;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  color: #909399;
+  cursor: pointer;
+}
+.list-search input[type="text"] {
+  color: #999;
+}
+.list-search a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 40px;
+  height: 40px;
+  color: #909399;
+  display: inline-block;
+}
+.list-search a i {
+  font-size: 18px;
+  cursor: pointer;
+}
+.el-dialog__wrapper {
+  top: 0px;
+}
+.delname {
+  text-align: center;
+}
+.myresource .el-dialog__wrapper input[type="text"] {
+  color: #fff;
+}
+.countindex {
+  color: rgb(153, 153, 153);
+}
+.countindex span {
+  margin-left: 4px;
+}
+.redheart {
+}
+.el-radio-button--medium .el-radio-button__inner {
+  padding: 10px 11px;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+.bodyleft .el-input__suffix {
+  right: 0;
+}
+.el-menu-demo {
+  margin-left: 100px;
+}
+.el-menu.el-menu--horizontal {
+  border: none;
+}
+.listbox .el-card__body {
+  padding: 0;
+}
+#boxbox .el-row {
+  margin-left: 0px !important ;
+  margin-right: 0px !important;
+}
+.el-button {
+  cursor: pointer;
+}
+
+.demo--checkbox.demo--radioInput,
+.demo--radio:checked + .demo--checkbox.demo--radioInput:after {
+  border-radius: 0;
+}
+.demo--radio:checked + .demo--radioInput {
+  border: 2px solid #31bc90;
+}
+/* el样式修改 */
+
+.el-select .el-input .el-select__caret {
+  color: #fff;
+  font-size: 10px;
+}
+.el-select .el-input.is-disabled .el-input__inner:hover {
+  border-color: #31bc90;
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #31bc90;
+}
+.el-select .el-input__inner:focus,
+.el-select:hover .el-input__inner {
+  border-color: #31bc90;
+}
+.el-button--text,
+.el-button--text:focus,
+.el-button--text:hover {
+  color: #222;
+}
+.el-radio-button__inner {
+  border: none !important;
+}
+.el-radio-button__inner:hover {
+  background: #31bc90;
+  color: #fff;
+}
+.el-radio-button:focus:not(.is-focus):not(:active):not(.is-disabled) {
+  -webkit-box-shadow: 0 0 2px 2px #fff;
+  box-shadow: 0 0 2px 2px #fff;
+}
+.el-radio-button__inner {
+  font-size: 16px;
+}
+.el-radio-button.is-active {
+  border: none;
+}
+.xxm-heart:before {
+  color: #999;
+}
+.el-icon-share:before {
+  color: #999;
+}
+.titleShow {
+  color: #31bc90;
+}
+.sort .el-button {
+  border: none;
+  padding: 0 11px;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 3px;
+}
+.sortclick {
+  color: #606266;
+}
+.sort .el-button:focus,
+.sort .el-button:hover {
+  background: #31bc90;
+  color: #fff;
+}
+.list-search {
+  margin-bottom: 18px;
+}
+.list-search .el-input__inner {
+  background: none;
+  border: 1px solid #dcdfe6;
+  color: #222;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  color: #909399;
+  cursor: pointer;
+}
+.list-search input[type="text"] {
+  color: #343837;
+  background: rgba(49, 188, 144, 0.2);
+  border: none;
+  letter-spacing: 1px;
+}
+.el-dialog__wrapper {
+  top: 0px;
+}
+.delname,
+.sharename {
+  text-align: center;
+}
+.myresource .el-dialog__wrapper input[type="text"] {
+  color: #999;
+}
+.countindex span {
+  margin-left: 4px;
+}
+input[type="text"].updateptname {
+  color: #999;
+  -webkit-appearance: none;
+  background-color: #FFF;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  width: 100%;
+}
+  .btnStyle:hover{
+    color: #31bc90;
+    border-color: #31bc90;
+    background-color: rgba(49,188,144,0.05);
+  }
+.el-radio-button--medium .el-radio-button__inner {
+  padding: 10px 6px;
+  font-size: 16px;
+  border-radius: 0;
+}
+.el-menu-demo {
+  margin-left: 100px;
+}
+.el-menu.el-menu--horizontal {
+  border: none;
+}
+.listbox .el-card__body {
+  padding: 0;
+}
+#boxbox .el-row {
+  margin-left: 0px !important ;
+  margin-right: 0px !important;
+}
+.sort_new {
+  margin-top: 6px;
+}
+.elbutton {
+  cursor: pointer;
+}
+.list-search .usize .el-button{
+  font-size: 16px;
+  color: #999;
+  padding:8px 20px 0px;
+}
+.list-search .usize .el-button:hover {
+  color: #31bc90;
+}
+/*上传图标大小微调*/
+.usize .xxm-shangchuan {
+  font-size: 20px;
+}
+#boxbox .nodata {
+  text-align: center;
+  color: #999;
+  margin-top: 10px;
+}
+.el-pager li.active {
+  background: #31bc90;
+  border: none;
+  cursor: default;
+  color: #fff;
+}
+#boxbox .el-button--primary {
+  background: #31bc90;
+  border-color: #31bc90;
+}
+.el-input-group__append,
+.el-input-group__prepend {
+  padding: 0 10px !important;
+  background: #31bc90;
+  color: #fff;
+  border: none;
+}
+.bodyright .el-dialog--center .el-dialog__body {
+  text-align: center;
+}
+.listCardType{
+  position: relative;
+}
+.listCardType .listCardTypeContent{
+  position: absolute;
+  z-index:99;
+  background: #31bc90;
+  color:#fff;
+  padding:2px 4px;
+  letter-spacing: 1px;
+}
+.listCardType>div{
+  background:rgba(49, 188, 144, 0.2);
+}
+.listbox .list-search .selectPptBtn{
+  cursor: pointer;
+  background:#fff;
+  height: 36px;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  width:100px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 12px;
+  margin-top: 4px;
+}
+.myresource .listbox,.myresource .ptcontent{
+  position: relative;
+}
+.myresource .ptcontent .el-card-mask{
+  height: 100%;
+  width:100%;
+  opacity: 1;
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  transition: all 0.2s;
+  z-index: 999;
+  border-radius: 8px;
+}
+.myresource .ptcontent .el-card-mask input{
+  width: 26px;
+  height: 26px;
+  -webkit-appearance: none;
+  border: 1px solid #c9c9c9;
+  border-radius: 20px;
+  outline: none;
+  margin-top:16px;
+  margin-left: 16px;
+}
+.myresource .ptcontent .el-card-mask .click-mask{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.myresource .ptcontent .el-card-mask .click-mask input[type=checkbox]{
+  position:absolute ;
+  z-index: -2;
+}
+.myresource .ptcontent .el-card-mask input:checked{
+  background:#31bc90 url("../../assets/image/icons/select.png") no-repeat center;
+  border:none;
+  background-size: 20px 20px;
+}
+.myresource .selectBox{
+  width: 220px;
+  height: 260px;
+  margin: 0 auto;
+  background: rgba(49, 188, 144, 0.7);
+  position: fixed;
+  top: 200px;
+  right: 90px;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.myresource .selectBox ul{
+  margin:0 10px;
+}
+.myresource .selectBox .clickBtnGroup{
+  background: rgba(255,168,59,1);
+  color:#fff;
+  border-color:#FFA83B;
+}
+.myresource .selectBox ul li{
+  height: 28px;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+.myresource .selectBox ul li span{
+  display: inline-block;
+  vertical-align:middle;
+}
+.myresource .selectBox ul li span:first-child{
+  width:67%;
+}
+.myresource .selectBox ul li span:last-child{
+  width:30%;
+}
+.myresource .selectBox p {
+  text-align: center;
+}
+.myresource .selectBox h3{
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin:16px auto;
+}
+.myresource .ptcontent .hoverCard{
+  opacity: 0;
+  border-radius: 8px;
+  transition: all 0.5s;
+  height: 100%;
+  width:100%;
+  color:#fff;
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 900
+}
+.myresource .ptcontent .hoverCard:hover{
+  opacity: 1;
+}
+.myresource .ptcontent .hoverCard .hoverCardTxt{
+  text-align: center;
+  margin-top: 50%;
+}
+.myresource .selectBox .groupKeyTxt{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.myresource .selectBox .groupCourse{
+  position: absolute;
+  bottom:20px;
+  width:100%;
+  text-align: center;
+}
+.myresource .selectBox .groupCourse .el-button{letter-spacing: 2px;}
+.myresource .selectBox  .groupKeyBtn i{cursor: pointer;}
+.myresource>.screenSort .el-radio-group:nth-child(3) .el-radio-button__inner{color:#49c9ff}
+.myresource .screenSort .el-radio-group:nth-child(3) .el-radio-button__orig-radio:checked+.el-radio-button__inner {color: #31bc90;}
+.myresource>.screenSort .el-radio-group:nth-child(4) .el-radio-button__inner{color:#49c9ff}
+.myresource .screenSort .el-radio-group:nth-child(4) .el-radio-button__orig-radio:checked+.el-radio-button__inner {color: #31bc90;}
+.myresource>.screenSort .el-radio-group:nth-child(5) .el-radio-button__inner{color:#49c9ff}
+.myresource .screenSort .el-radio-group:nth-child(5) .el-radio-button__orig-radio:checked+.el-radio-button__inner {color: #31bc90;}
+.myresource>.screenSort .el-radio-group:nth-child(6) .el-radio-button__inner{color:#49c9ff}
+.myresource .screenSort .el-radio-group:nth-child(6) .el-radio-button__orig-radio:checked+.el-radio-button__inner {color: #31bc90;}
+.myresource .el-dialog__header{background: #31bc90;}
+.myresource .el-dialog__header>.el-dialog__title{color:#fff;font-size: 18px;}
+.myresource .el-dialog__header>.el-dialog__headerbtn>.el-dialog__close.el-icon.el-icon-close{color: #fff;}
+.myresource .listbox{margin-bottom:0;}

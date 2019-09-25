@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #262626;
+  --second-color: #333
+}
+
+* {box-sizing:border-box; font-family:'microsoft yahei ui','microsoft yahei',sans-serif}
+body, html {font-size:14px; color:#333}
+ul, li, dl, dt, dd, h1, h2 {padding:0; border:0; margin:0; list-style:none}
+
+body {background:#efefef}
+
+input,button,select,textarea{outline:none}
+select {padding:2px 10px}
+
+.btn {cursor:pointer; padding:7px 20px; background:var(--primary-color); color:#fff; font-size:12px; border:0}
+.btn:hover {background:var(--second-color)}
+
+
+@keyframes animate-btn-close {
+	form { transform:rotate(0) }
+	to { transform:rotate(90deg) }
+}
+
+@keyframes animate-btn-close-leave {
+	form { transform:rotate(0) }
+	to { transform:rotate(-90deg) }
+}
+
+.page-title, .dialogtitle {z-index:1; height:50px; padding:0 20px; font-weight:700; font-size:16px; background:#fff; box-shadow:0 3px 2px #ccc; display:flex; align-items:center; justify-content:space-between}
+.page-title .console {display:flex; align-items:center; margin:0}
+.page-title .console input[type=image], .dialogtitle input[type=image] {animation:200ms linear 0s animate-btn-close-leave; height:28px; width:28px; cursor:pointer}
+
+.page-title .console .dialogclose:hover, .dialogtitle .dialogclose:hover, .advsearch .btn-icon-close:hover {animation:200ms linear 0s animate-btn-close}
+.page-title .console .dialogclose, .dialogtitle .dialogclose {cursor:pointer; height:20px; width:20px}
+.page-title .console .dialogclose:after, .dialogtitle .dialogclose:after, .advsearch .btn-icon-close:after {transform:rotate(45deg); top:6px; display:block; content:''; width:20px; height:3px; background:var(--primary-color); position:relative}
+.page-title .console .dialogclose:before, .dialogtitle .dialogclose:before, .advsearch .btn-icon-close:before {transform:rotate(-45deg); top:9px; display:block; content:''; width:20px; height:3px; background:var(--primary-color); position:relative}
+
+
+input[type=file] {display:none}
+input[type=button]:disabled {background:#999}
+
