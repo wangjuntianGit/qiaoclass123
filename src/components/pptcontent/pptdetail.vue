@@ -315,7 +315,6 @@ export default {
   },
   destroyed: function () {
     clearInterval(this.autoSaveTimer)
-
   },
   watch: {
     $route (to, from) {
