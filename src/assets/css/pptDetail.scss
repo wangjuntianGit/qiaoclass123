@@ -1,1158 +1,3 @@
-
-.pptdetail{
-  .topbox{
-    background:#31BC90;
-    .topHeader_detailPptTop{
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    .el-row{
-      box-shadow:0px 5px 12px 0px rgba(126,151,143,0.2);
-    }
-  }
-  .commentPptBox{
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #f5f5f5;
-    .pptMenu{
-      //overflow-y:scroll;
-      .firstlevel{
-        font-size:14px;
-        font-weight:400;
-        margin-left: 16px;
-        //margin-top: 20px;
-        overflow-y:scroll;
-      }
-    }
-  }
-  .upload {
-    width: 100%;
-    border: 1px #ddd solid;
-    background: rgb(252, 240, 240);
-  }
-  .upload .box {
-    padding: 20px;
-  }
-  .upload_drag {
-    border: 1px var(--primary-color) dotted;
-  }
-  .upload .progress {
-    width: 0;
-    overflow: hidden;
-    display: none;
-    height: 3px;
-    background: var(--primary-color);
-  }
-
-  .ppt {
-    width: 100%;
-    background: #fff;
-    padding: 10px 0;
-    box-shadow: 1px 1px 4px #9c9c9c;
-    margin-top: 20px;
-    border-radius:8px;
-  }
-
-  .ppt .tabhost {
-    background: #eee;
-    display: flex;
-  }
-  .ppt .tabhost li {
-    padding: 7px 10px;
-    cursor: pointer;
-    color: #999;
-    flex: 1;
-    text-align: center;
-  }
-  .ppt .tabhost li.h {
-    background: #fff;
-    color: #333;
-  }
-
-  .ppt .info.leftmenu {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-  }
-  .ppt .tabplan {
-    flex: 1;
-    height: 0;
-    //overflow-y: auto;
-    //overflow-x: hidden;
-  }
-  .ppt .docment {
-    padding: 10px 20px;
-  }
-  .ppt .docment li {
-    margin-top: 10px;
-  }
-  .ppt .docment li div {
-    color: #999;
-    font-size: 12px;
-    margin: 5px 0 0 10px;
-  }
-
-  .ppt .object li,
-  .ppt .page li {
-    margin: 10px;
-    font-size: 12px;
-  }
-  .ppt li.h {
-    background: #fafafa;
-    border: 2px solid red !important;
-    border-radius: 2px;
-  }
-  .ppt ul.page li:first-child {
-    background: #fafafa;
-    border: 2px solid red;
-    border-radius: 2px;
-  }
-
-  .ppt ul.page li {
-    position: relative;
-    cursor: pointer;
-  }
-  .ppt ul.page li > div {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    font-size: 12px;
-  }
-  .ppt ul.page li > div.page-tool {
-    display: flex;
-  }
-  .ppt ul.page li > div.page-tool > div {
-    width: 30%;
-  }
-  .ppt .control {
-    display: flex;
-    margin-bottom: 10px;
-    justify-content: flex-end;
-  }
-  .ppt .control .btn {
-    margin-right: 10px;
-    display: block;
-  }
-  .ppt .control .btn:last-child {
-    margin-right: 0;
-  }
-  .ppt .canvas {
-    border: 1px #ddd solid;
-    background: #fff;
-    width: 100%;
-  }
-  .ppt .right {
-    position: relative;
-  }
-  .ppt .right .canvas div {
-    font-size: 13px;
-  }
-  .ppt .pptcanvas_page {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    background: #f0f6f5;
-    position: absolute;
-    bottom: -40px;
-    font-size: 14px;
-
-  }
-  .pptcanvas_page .fontLine{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-  }
-  .ppt .myPptCon {
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-  }
-
-  /*滚动条样式*/
-  .firstlevel::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .firstlevel::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .firstlevel::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  .menu .checkallli {
-    margin: 0 6px 0 16px;
-    line-height: 30px;
-    height: 30px;
-    color: #31bc90;
-    font-size: 16px;
-  }
-
-  /* .ppt .pptcanvas_page .el-col{text-align: center} */
-  .fullscreen {
-    overflow: hidden;
-    display: none;
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-  }
-  .fullscreen .btn-exit-fullscreen {
-    z-index: 100;
-    cursor: pointer;
-    border: 0;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 7px 20px;
-    background: rgba(255, 255, 255, 0.6);
-    color: #000;
-    border-radius: 5px;
-  }
-  /*修复全屏模式下文字显示错位*/
-  .fullscreen .canvas div {
-    font-size: 12px;
-  }
-  .pptdetail_header .el-button {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 20px;
-  }
-  .pptdetail_header {
-    height: 60px;
-    line-height: 60px;
-  }
-  .pptdetail_header .ppttitle {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-  }
-  /* .pptdetail .editBut{width:60px;margin:0 auto;} */
-
-  .mainContent {
-    /* overflow-y: auto; */
-    border-right: 3px solid #cdcdcd;
-  }
-  .ppt {
-    overflow: hidden;
-  }
-
-  /*滚动条样式*/
-  .mainContent::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .mainContent::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .mainContent::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  /*滚动条样式*/
-  .edit-page-wapper::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .edit-page-wapper::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .edit-page-wapper::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  .el-button:focus,
-  .el-button:hover {
-    color: #606266;
-    border-color: #fff;
-    background-color: #fff;
-  }
-  .actived {
-    background: #f5f5f5;
-  }
-  .menu .firstlevel {
-    width: 90%;
-    overflow-y: scroll;
-    height: 100%;
-  }
-  .menu .ullisty {
-    height: 36px;
-    line-height: 36px;
-    padding-left: 6px;
-  }
-  .menu .edititem {
-    margin-right: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu .inputMenu {
-    display: none;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    line-height: 32px;
-    height: 32px;
-    padding: 2px 0 0 4px;
-    width: calc(100% - 40px);
-  }
-  .menu .firstlevel .libox {
-    display: flex;
-    line-height: 32px;
-    height: 32px;
-    width: 100%;
-    cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu .firstlevel .licheckbox {
-    margin-right: 10px;
-    margin-top: 8px;
-  }
-  .menu input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    background-color: #fff;
-    -webkit-appearance: none;
-    border: 1px solid #c9c9c9;
-    border-radius: 2px;
-    outline: none;
-  }
-  .menu .menucheckbox.licheckbox {
-    border-radius: 50%;
-  }
-  .menu input[type="checkbox"]:checked {
-    background: #f2695e url("../../assets/image/icons/select.png") no-repeat
-    center;
-    border: none;
-    background-size: 20px 20px;
-  }
-  .firstlevel.checkallli {
-    line-height: 30px;
-    height: 30px;
-  }
-  .firstlevel.checkallli span:first-child {
-    font-size: 16px;
-    color: #31bc90;
-    font-weight: 400;
-  }
-  .firstlevel.checkallli span.checkallbox input[type="checkbox"] {
-    /* margin-top: 16px; */
-  }
-  .checkallbox {
-    float: right;
-    margin-right: 10px;
-  }
-  .menu .ullisty:hover {
-    background: #f8f8f8;
-  }
-  .menu .ullisty .check-item-option {
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-  }
-  .menu .ullisty .el-dropdown-wapper {
-    opacity: 0;
-  }
-  .menu .ullisty:hover .el-dropdown-wapper {
-    opacity: 1;
-  }
-  .del-menu-tips-wapper .el-dialog__header {
-    background: #31bc90;
-  }
-  .del-menu-tips-wapper .el-dialog__header .el-dialog__title,
-  .del-menu-tips-wapper
-  .el-dialog__header
-  .el-dialog__headerbtn
-  .el-dialog__close {
-    color: #fff;
-  }
-  .del-menu-tips-wapper .el-button--danger:hover {
-    color: #fff;
-    background-color: #f56c6c;
-    border-color: #f56c6c;
-    opacity: 0.7;
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
-    0 2px 4px 0 rgba(232, 237, 250, 0.5);
-  }
-  .del-menu-tips-wapper .el-button--default:hover {
-    color: #31bc90;
-    border-color: #31bc90;
-  }
-  .ppt .right .ppt-wapper {
-    position: relative;
-  }
-  .ppt .right .ppt-wapper .ppt-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 90px;
-    height: 24px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    z-index: -99;
-    transform: translateX(100%);
-    transition: all 0.5s;
-    opacity: 0;
-    background: url("../../assets/image/badge.png") no-repeat center;
-  }
-  .ppt .right .ppt-wapper .ppt-badge-active {
-    opacity: 1;
-    z-index: 99;
-    transform: translateX(0);
-  }
-  .insert-media-wapper {
-    margin-top: 52px;
-    display: flex;
-  }
-  .insert-media-wapper .media-item {
-    position: relative;
-    flex: 1 1 auto;
-    width: 120px;
-    height: 120px;
-    border: 1px solid #efefef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
-  }
-  .insert-media-wapper .media-item:not(:last-child) {
-    margin-right: 10px;
-  }
-  .insert-media-wapper .media-item .media-image {
-    width: 60px;
-    height: 60px;
-  }
-  .insert-media-wapper .media-item .media-title {
-    margin-top: 8px;
-  }
-  .insert-media-wapper .media-item .media-subtitle {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.54);
-  }
-  .insert-media-wapper .media-item .media-mask {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    transition: all 0.4s;
-    padding: 0 12px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 4px;
-    opacity: 0;
-  }
-  .insert-media-wapper .media-item:hover .media-mask {
-    height: 100%;
-    opacity: 1;
-  }
-  .insert-media-wapper .media-item:hover .media-mask .el-button + .el-button {
-    margin-top: 12px;
-    margin-left: 0;
-  }
-  .insert-media-wapper .media-item .media-mask .uploadonly .uploadbtn {
-    justify-content: flex-start !important;
-  }
-  .ppt ul.edit-page-wapper{
-    overflow-y: scroll;
-    height: 96%;
-  }
-  .ppt ul.edit-page-wapper li .page-tool {
-    display: flex;
-    bottom: 0;
-    height: 0;
-    padding: 0 6px;
-    align-items: center;
-    font-size: 14px;
-    transition: all 0.4s;
-    opacity: 0;
-  }
-  .ppt ul.edit-page-wapper li .page-tool i {
-    flex: 1;
-    font-weight: bold;
-  }
-  .ppt ul.edit-page-wapper li:hover .page-tool {
-    height: 24px;
-    opacity: 1;
-  }
-  .ghost {
-    opacity: 0.5;
-    background: #c8ebfb;
-  }
-  .issue-box {
-    margin: 60px 0 20px 0;
-  }
-  .ppt .page li.noPagePpt {
-    width: 99%;
-    text-align: center;
-    margin-top: 130%;
-    font-size: 16px;
-    color: #999;
-  }
-  .noPagePpt span {
-    font-size: 14px;
-  }
-
-  .noPagePpt {
-    width: 99%;
-    text-align: center;
-    margin-top: 130%;
-    font-size: 16px;
-    color: #999;
-    display: none;
-  }
-  .playerbox {
-    position: relative;
-  }
-  .playerbox::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    /* left: calc(100% - 60px); */
-    /* left:calc(18% - 82px); */
-    /* top: calc(100% - 65px); */
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 30px solid #fff;
-    top:calc(50% - 14px);
-    left:calc(1%);
-
-    right: 0;
-    margin:auto;
-  }
-  .playerbox::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    /* left: calc(100% - 80px); */
-    /* left:calc(3%); */
-    /* top: calc(100% - 80px); */
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    margin: auto;
-  }
-  .playerbox.hideAB::after,
-  .playerbox.hideAB::before {
-    display: none;
-  }
-  .el-input--suffix .el-input__inner{padding-right: 40px;}
-}
-.pptdetail{
-  .topbox{
-    background:#31BC90;
-    .topHeader_detailPptTop{
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    .el-row{
-      box-shadow:0px 5px 12px 0px rgba(126,151,143,0.2);
-    }
-  }
-  .commentPptBox{
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #f5f5f5;
-    .pptMenu{
-      //overflow-y:scroll;
-      .firstlevel{
-        font-size:14px;
-        font-weight:400;
-        margin-left: 16px;
-        //margin-top: 20px;
-      }
-    }
-  }
-  .upload {
-    width: 100%;
-    border: 1px #ddd solid;
-    background: rgb(252, 240, 240);
-  }
-  .upload .box {
-    padding: 20px;
-  }
-  .upload_drag {
-    border: 1px var(--primary-color) dotted;
-  }
-  .upload .progress {
-    width: 0;
-    overflow: hidden;
-    display: none;
-    height: 3px;
-    background: var(--primary-color);
-  }
-
-  .ppt {
-    width: 100%;
-    background: #fff;
-    padding: 10px 0;
-    box-shadow: 1px 1px 4px #9c9c9c;
-    margin-top: 20px;
-    border-radius:8px;
-  }
-
-  .ppt .tabhost {
-    background: #eee;
-    display: flex;
-  }
-  .ppt .tabhost li {
-    padding: 7px 10px;
-    cursor: pointer;
-    color: #999;
-    flex: 1;
-    text-align: center;
-  }
-  .ppt .tabhost li.h {
-    background: #fff;
-    color: #333;
-  }
-
-  .ppt .info.leftmenu {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-  }
-  .ppt .tabplan {
-    flex: 1;
-    height: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .ppt .docment {
-    padding: 10px 20px;
-  }
-  .ppt .docment li {
-    margin-top: 10px;
-  }
-  .ppt .docment li div {
-    color: #999;
-    font-size: 12px;
-    margin: 5px 0 0 10px;
-  }
-
-  .ppt .object li,
-  .ppt .page li {
-    margin: 10px;
-    font-size: 12px;
-  }
-  .ppt li.h {
-    background: #fafafa;
-    border: 2px solid red !important;
-    border-radius: 2px;
-  }
-  .ppt ul.page li:first-child {
-    background: #fafafa;
-    border: 2px solid red;
-    border-radius: 2px;
-  }
-
-  .ppt ul.page li {
-    position: relative;
-    cursor: pointer;
-  }
-  .ppt ul.page li > div {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    font-size: 12px;
-  }
-  .ppt ul.page li > div.page-tool {
-    display: flex;
-  }
-  .ppt ul.page li > div.page-tool > div {
-    width: 30%;
-  }
-  .ppt .control {
-    display: flex;
-    margin-bottom: 10px;
-    justify-content: flex-end;
-  }
-  .ppt .control .btn {
-    margin-right: 10px;
-    display: block;
-  }
-  .ppt .control .btn:last-child {
-    margin-right: 0;
-  }
-  .ppt .canvas {
-    border: 1px #ddd solid;
-    background: #fff;
-    width: 100%;
-  }
-  .ppt .right {
-    position: relative;
-  }
-  .ppt .right .canvas div {
-    font-size: 13px;
-  }
-  .ppt .pptcanvas_page {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    background: #f0f6f5;
-    position: absolute;
-    bottom: -40px;
-    font-size: 14px;
-
-  }
-  .pptcanvas_page .fontLine{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-  }
-  .ppt .myPptCon {
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-  }
-
-  /*滚动条样式*/
-  //.menu::-webkit-scrollbar {
-  //  /*滚动条整体样式*/
-  //  width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-  //  height: 3px;
-  //}
-  //.menu::-webkit-scrollbar-thumb {
-  //  /*滚动条里面小方块*/
-  //  border-radius: 5px;
-  //  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  //  background: rgba(0, 0, 0, 0.2);
-  //}
-  //.menu::-webkit-scrollbar-track {
-  //  /*滚动条里面轨道*/
-  //  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  //  border-radius: 0;
-  //  background: rgba(0, 0, 0, 0.1);
-  //}
-
-  /* .ppt .pptcanvas_page .el-col{text-align: center} */
-  .fullscreen {
-    overflow: hidden;
-    display: none;
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-  }
-  .fullscreen .btn-exit-fullscreen {
-    z-index: 100;
-    cursor: pointer;
-    border: 0;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 7px 20px;
-    background: rgba(255, 255, 255, 0.6);
-    color: #000;
-    border-radius: 5px;
-  }
-  /*修复全屏模式下文字显示错位*/
-  .fullscreen .canvas div {
-    font-size: 12px;
-  }
-  .pptdetail_header .el-button {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 20px;
-  }
-  .pptdetail_header {
-    height: 60px;
-    line-height: 60px;
-  }
-  .pptdetail_header .ppttitle {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-  }
-  /* .pptdetail .editBut{width:60px;margin:0 auto;} */
-
-  .mainContent {
-    /* overflow-y: auto; */
-    border-right: 3px solid #cdcdcd;
-  }
-  .ppt {
-    overflow: hidden;
-  }
-
-  /*滚动条样式*/
-  .mainContent::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .mainContent::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .mainContent::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  /*滚动条样式*/
-  .ppt .tabplan::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .ppt .tabplan::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .ppt .tabplan::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  .el-button:focus,
-  .el-button:hover {
-    color: #606266;
-    border-color: #fff;
-    background-color: #fff;
-  }
-  .actived {
-    background: #f5f5f5;
-  }
-  .menu .firstlevel {
-    width: 90%;
-  }
-  .menu .ullisty {
-    height: 36px;
-    line-height: 36px;
-    padding-left: 6px;
-  }
-  .menu .edititem {
-    margin-right: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu .inputMenu {
-    display: none;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    line-height: 32px;
-    height: 32px;
-    padding: 2px 0 0 4px;
-    width: calc(100% - 40px);
-  }
-  .menu .firstlevel .libox {
-    display: flex;
-    line-height: 32px;
-    height: 32px;
-    width: 100%;
-    cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu .firstlevel .licheckbox {
-    margin-right: 10px;
-    margin-top: 8px;
-  }
-  .menu input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    background-color: #fff;
-    -webkit-appearance: none;
-    border: 1px solid #c9c9c9;
-    border-radius: 2px;
-    outline: none;
-  }
-  .menu .menucheckbox.licheckbox {
-    border-radius: 50%;
-  }
-  .menu input[type="checkbox"]:checked {
-    background: #f2695e url("../../assets/image/icons/select.png") no-repeat
-    center;
-    border: none;
-    background-size: 20px 20px;
-  }
-  .firstlevel.checkallli {
-    line-height: 30px;
-    height: 30px;
-  }
-  .firstlevel.checkallli span:first-child {
-    font-size: 16px;
-    color: #31bc90;
-    font-weight: 400;
-  }
-  .firstlevel.checkallli span.checkallbox input[type="checkbox"] {
-    /* margin-top: 16px; */
-  }
-  .checkallbox {
-    float: right;
-    margin-right: 10px;
-  }
-  .menu .ullisty:hover {
-    background: #f8f8f8;
-  }
-  .menu .ullisty .check-item-option {
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-  }
-  .menu .ullisty .el-dropdown-wapper {
-    opacity: 0;
-  }
-  .menu .ullisty:hover .el-dropdown-wapper {
-    opacity: 1;
-  }
-  .del-menu-tips-wapper .el-dialog__header {
-    background: #31bc90;
-  }
-  .del-menu-tips-wapper .el-dialog__header .el-dialog__title,
-  .del-menu-tips-wapper
-  .el-dialog__header
-  .el-dialog__headerbtn
-  .el-dialog__close {
-    color: #fff;
-  }
-  .del-menu-tips-wapper .el-button--danger:hover {
-    color: #fff;
-    background-color: #f56c6c;
-    border-color: #f56c6c;
-    opacity: 0.7;
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
-    0 2px 4px 0 rgba(232, 237, 250, 0.5);
-  }
-  .del-menu-tips-wapper .el-button--default:hover {
-    color: #31bc90;
-    border-color: #31bc90;
-  }
-  .ppt .right .ppt-wapper {
-    position: relative;
-  }
-  .ppt .right .ppt-wapper .ppt-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 90px;
-    height: 24px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    z-index: -99;
-    transform: translateX(100%);
-    transition: all 0.5s;
-    opacity: 0;
-    background: url("../../assets/image/badge.png") no-repeat center;
-  }
-  .ppt .right .ppt-wapper .ppt-badge-active {
-    opacity: 1;
-    z-index: 99;
-    transform: translateX(0);
-  }
-  .insert-media-wapper {
-    margin-top: 52px;
-    display: flex;
-  }
-  .insert-media-wapper .media-item {
-    position: relative;
-    flex: 1 1 auto;
-    width: 120px;
-    height: 120px;
-    border: 1px solid #efefef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
-  }
-  .insert-media-wapper .media-item:not(:last-child) {
-    margin-right: 10px;
-  }
-  .insert-media-wapper .media-item .media-image {
-    width: 60px;
-    height: 60px;
-  }
-  .insert-media-wapper .media-item .media-title {
-    margin-top: 8px;
-  }
-  .insert-media-wapper .media-item .media-subtitle {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.54);
-  }
-  .insert-media-wapper .media-item .media-mask {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    transition: all 0.4s;
-    padding: 0 12px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 4px;
-    opacity: 0;
-  }
-  .insert-media-wapper .media-item:hover .media-mask {
-    height: 100%;
-    opacity: 1;
-  }
-  .insert-media-wapper .media-item:hover .media-mask .el-button + .el-button {
-    margin-top: 12px;
-    margin-left: 0;
-  }
-  .insert-media-wapper .media-item .media-mask .uploadonly .uploadbtn {
-    justify-content: flex-start !important;
-  }
-  .ppt ul.edit-page-wapper li .page-tool {
-    display: flex;
-    bottom: 0;
-    height: 0;
-    padding: 0 6px;
-    align-items: center;
-    font-size: 14px;
-    transition: all 0.4s;
-    opacity: 0;
-  }
-  .ppt ul.edit-page-wapper li .page-tool i {
-    flex: 1;
-    font-weight: bold;
-  }
-  .ppt ul.edit-page-wapper li:hover .page-tool {
-    height: 24px;
-    opacity: 1;
-  }
-  .ghost {
-    opacity: 0.5;
-    background: #c8ebfb;
-  }
-  .issue-box {
-    margin: 60px 0 20px 0;
-  }
-  .ppt .page li.noPagePpt {
-    width: 99%;
-    text-align: center;
-    margin-top: 130%;
-    font-size: 16px;
-    color: #999;
-  }
-  .noPagePpt span {
-    font-size: 14px;
-  }
-
-  .noPagePpt {
-    width: 99%;
-    text-align: center;
-    margin-top: 130%;
-    font-size: 16px;
-    color: #999;
-    display: none;
-  }
-  .playerbox {
-    position: relative;
-  }
-  .playerbox::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    /* left: calc(100% - 60px); */
-    /* left:calc(18% - 82px); */
-    /* top: calc(100% - 65px); */
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 30px solid #fff;
-    top:calc(50% - 14px);
-    left:calc(1%);
-
-    right: 0;
-    margin:auto;
-  }
-  .playerbox::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    /* left: calc(100% - 80px); */
-    /* left:calc(3%); */
-    /* top: calc(100% - 80px); */
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    margin: auto;
-  }
-  .playerbox.hideAB::after,
-  .playerbox.hideAB::before {
-    display: none;
-  }
-  .el-input--suffix .el-input__inner{padding-right: 40px;}
-}
 .pptdetail{
   .topbox{
     background:#31BC90;
@@ -1175,6 +20,7 @@
         font-weight:400;
         margin-left: 16px;
         //margin-top: 20px;
+          overflow-y:scroll;
       }
     }
   }
@@ -1327,422 +173,452 @@
   }
 
   /*滚动条样式*/
-  .menu::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
+    .firstlevel::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 3px;
+    }
+    .firstlevel::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .firstlevel::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+    .menu .checkallli {
+      margin: 0 6px 0 16px;
+      line-height: 30px;
+      height: 30px;
+      color: #31bc90;
+      font-size: 16px;
+    }
+  
+    /* .ppt .pptcanvas_page .el-col{text-align: center} */
+    .fullscreen {
+      overflow: hidden;
+      display: none;
+      background: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .fullscreen .btn-exit-fullscreen {
+      z-index: 100;
+      cursor: pointer;
+      border: 0;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      padding: 7px 20px;
+      background: rgba(255, 255, 255, 0.6);
+      color: #000;
+      border-radius: 5px;
+    }
+    /*修复全屏模式下文字显示错位*/
+    .fullscreen .canvas div {
+      font-size: 12px;
+    }
+    .fullscreen  >.upPage,.downPage{
+       position:absolute;
+        z-index:100;
+        width:50px;
+        height:50px;
+        top:50%;
+        margin-top:-25px;
+        background:rgba(85,91,117,0.5);
+        border-radius:50%;
+        font-size:20px;
+        line-height:50px;
+        text-align:center;
+        color:#ffffff;
+    }
+     .fullscreen >.downPage{
+         right:25px;
+            padding-left:5px
+    }
+     .fullscreen >.upPage{
+        left:25px;
+        padding-right:5px;
+     }
+    .pptdetail_header .el-button {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 20px;
+    }
+    .pptdetail_header {
+      height: 60px;
+      line-height: 60px;
+    }
+    .pptdetail_header .ppttitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+    }
+    /* .pptdetail .editBut{width:60px;margin:0 auto;} */
+  
+    .mainContent {
+      /* overflow-y: auto; */
+      border-right: 3px solid #cdcdcd;
+    }
+    .ppt {
+      overflow: hidden;
+    }
+  
+    /*滚动条样式*/
+    .mainContent::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 3px;
+    }
+    .mainContent::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .mainContent::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+  
+    /*滚动条样式*/
+    .ppt .tabplan::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 3px;
+    }
+    .ppt .tabplan::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .ppt .tabplan::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+     /*滚动条样式*/
+    .edit-page-wapper::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 3px;
+    }
+    .edit-page-wapper::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .edit-page-wapper::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+    .el-button:focus,
+    .el-button:hover {
+      color: #606266;
+      border-color: #fff;
+      background-color: #fff;
+    }
+    .actived {
+      background: #f5f5f5;
+    }
+    .menu .firstlevel {
+      width: 90%;
+      overflow-y: scroll;
+      height: 100%;
+    }
+    .menu .ullisty {
+      height: 36px;
+      line-height: 36px;
+      padding-left: 6px;
+    }
+    .menu .edititem {
+      margin-right: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .menu .inputMenu {
+      display: none;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      line-height: 32px;
+      height: 32px;
+      padding: 2px 0 0 4px;
+      width: calc(100% - 40px);
+    }
+    .menu .firstlevel .libox {
+      display: flex;
+      line-height: 32px;
+      height: 32px;
+      width: 100%;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .menu .firstlevel .licheckbox {
+      margin-right: 10px;
+      margin-top: 8px;
+    }
+    .menu input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      -webkit-appearance: none;
+      border: 1px solid #c9c9c9;
+      border-radius: 2px;
+      outline: none;
+    }
+    .menu .menucheckbox.licheckbox {
+      border-radius: 50%;
+    }
+    .menu input[type="checkbox"]:checked {
+      background: #f2695e url("../../assets/image/icons/select.png") no-repeat
+      center;
+      border: none;
+      background-size: 20px 20px;
+    }
+    .firstlevel.checkallli {
+      line-height: 30px;
+      height: 30px;
+    }
+    .firstlevel.checkallli span:first-child {
+      font-size: 16px;
+      color: #31bc90;
+      font-weight: 400;
+    }
+    .firstlevel.checkallli span.checkallbox input[type="checkbox"] {
+      /* margin-top: 16px; */
+    }
+    .checkallbox {
+      float: right;
+      margin-right: 10px;
+    }
+    .menu .ullisty:hover {
+      background: #f8f8f8;
+    }
+    .menu .ullisty .check-item-option {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      text-align: center;
+    }
+    .menu .ullisty .el-dropdown-wapper {
+      opacity: 0;
+    }
+    .menu .ullisty:hover .el-dropdown-wapper {
+      opacity: 1;
+    }
+    .del-menu-tips-wapper .el-dialog__header {
+      background: #31bc90;
+    }
+    .del-menu-tips-wapper .el-dialog__header .el-dialog__title,
+    .del-menu-tips-wapper
+    .el-dialog__header
+    .el-dialog__headerbtn
+    .el-dialog__close {
+      color: #fff;
+    }
+    .del-menu-tips-wapper .el-button--danger:hover {
+      color: #fff;
+      background-color: #f56c6c;
+      border-color: #f56c6c;
+      opacity: 0.7;
+      box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
+      0 2px 4px 0 rgba(232, 237, 250, 0.5);
+    }
+    .del-menu-tips-wapper .el-button--default:hover {
+      color: #31bc90;
+      border-color: #31bc90;
+    }
+    .ppt .right .ppt-wapper {
+      position: relative;
+    }
+    .ppt .right .ppt-wapper .ppt-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 90px;
+      height: 24px;
+      line-height: 24px;
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      z-index: -99;
+      transform: translateX(100%);
+      transition: all 0.5s;
+      opacity: 0;
+      background: url("../../assets/image/badge.png") no-repeat center;
+    }
+    .ppt .right .ppt-wapper .ppt-badge-active {
+      opacity: 1;
+      z-index: 99;
+      transform: translateX(0);
+    }
+    .insert-media-wapper {
+      margin-top: 52px;
+      display: flex;
+    }
+    .insert-media-wapper .media-item {
+      position: relative;
+      flex: 1 1 auto;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #efefef;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+    }
+    .insert-media-wapper .media-item:not(:last-child) {
+      margin-right: 10px;
+    }
+    .insert-media-wapper .media-item .media-image {
+      width: 60px;
+      height: 60px;
+    }
+    .insert-media-wapper .media-item .media-title {
+      margin-top: 8px;
+    }
+    .insert-media-wapper .media-item .media-subtitle {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+    .insert-media-wapper .media-item .media-mask {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      transition: all 0.4s;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 4px;
+      opacity: 0;
+    }
+    .insert-media-wapper .media-item:hover .media-mask {
+      height: 100%;
+      opacity: 1;
+    }
+    .insert-media-wapper .media-item:hover .media-mask .el-button + .el-button {
+      margin-top: 12px;
+      margin-left: 0;
+    }
+    .insert-media-wapper .media-item .media-mask .uploadonly .uploadbtn {
+      justify-content: flex-start !important;
+    }
+    .ppt ul.edit-page-wapper{
+      overflow-y: scroll;
+      height: 96%;
+    }
+    .ppt ul.edit-page-wapper li .page-tool {
+      display: flex;
+      bottom: 0;
+      height: 0;
+      padding: 0 6px;
+      align-items: center;
+      font-size: 14px;
+      transition: all 0.4s;
+      opacity: 0;
+    }
+    .ppt ul.edit-page-wapper li .page-tool i {
+      flex: 1;
+      font-weight: bold;
+    }
+    .ppt ul.edit-page-wapper li:hover .page-tool {
+      height: 24px;
+      opacity: 1;
+    }
+    .ghost {
+      opacity: 0.5;
+      background: #c8ebfb;
+    }
+    .issue-box {
+      margin: 60px 0 20px 0;
+    }
+    .ppt .page li.noPagePpt {
+      width: 99%;
+      text-align: center;
+      margin-top: 130%;
+      font-size: 16px;
+      color: #999;
+    }
+    .noPagePpt span {
+      font-size: 14px;
+    }
+  
+    .noPagePpt {
+      width: 99%;
+      text-align: center;
+      margin-top: 130%;
+      font-size: 16px;
+      color: #999;
+      display: none;
+    }
+    .playerbox {
+      position: relative;
+    }
+    .playerbox::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      /* left: calc(100% - 60px); */
+      /* left:calc(18% - 82px); */
+      /* top: calc(100% - 65px); */
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 30px solid #fff;
+      top:calc(50% - 14px);
+      left:calc(1%);
+  
+      right: 0;
+      margin:auto;
+    }
+    .playerbox::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      /* left: calc(100% - 80px); */
+      /* left:calc(3%); */
+      /* top: calc(100% - 80px); */
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 100%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      margin: auto;
+    }
+    .playerbox.hideAB::after,
+    .playerbox.hideAB::before {
+      display: none;
+    }
+    .el-input--suffix .el-input__inner{padding-right: 40px;}
   }
-  .menu::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .menu::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  /* .ppt .pptcanvas_page .el-col{text-align: center} */
-  .fullscreen {
-    overflow: hidden;
-    display: none;
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .fullscreen .btn-exit-fullscreen {
-    z-index: 100;
-    cursor: pointer;
-    border: 0;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 7px 20px;
-    background: rgba(255, 255, 255, 0.6);
-    color: #000;
-    border-radius: 5px;
-  }
-  /*修复全屏模式下文字显示错位*/
-  .fullscreen .canvas div {
-    font-size: 12px;
-  }
-  .fullscreen  >.upPage,.downPage{
-       position:absolute;
-       z-index:100;
-       width:50px;
-       height:50px;
-       top:50%;
-       margin-top:-25px;
-       background:rgba(85,91,117,0.5);
-       border-radius:50%;
-       font-size:20px;
-       line-height:50px;
-       text-align:center;
-       color:#ffffff;
-  }
-  .fullscreen >.downPage{
-      right:25px;
-      padding-left:5px
-  }
-  .fullscreen >.upPage{
-      left:25px;
-      padding-right:5px;
-  }
-  .pptdetail_header .el-button {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 20px;
-  }
-  .pptdetail_header {
-    height: 60px;
-    line-height: 60px;
-  }
-  .pptdetail_header .ppttitle {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-  }
-  /* .pptdetail .editBut{width:60px;margin:0 auto;} */
-
-  .mainContent {
-    /* overflow-y: auto; */
-    border-right: 3px solid #cdcdcd;
-  }
-  .ppt {
-    overflow: hidden;
-  }
-
-  /*滚动条样式*/
-  .mainContent::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .mainContent::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .mainContent::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  /*滚动条样式*/
-  .ppt .tabplan::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-    height: 3px;
-  }
-  .ppt .tabplan::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.2);
-  }
-  .ppt .tabplan::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  .el-button:focus,
-  .el-button:hover {
-    color: #606266;
-    border-color: #fff;
-    background-color: #fff;
-  }
-  .actived {
-    background: #f5f5f5;
-  }
-  .menu .firstlevel {
-    width: 90%;
-  }
-  .menu .ullisty {
-    height: 36px;
-    line-height: 36px;
-    padding-left: 6px;
-  }
-  .menu .edititem {
-    margin-right: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu .inputMenu {
-    display: none;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    line-height: 32px;
-    height: 32px;
-    padding: 2px 0 0 4px;
-    width: calc(100% - 40px);
-  }
-  .menu .firstlevel .libox {
-    display: flex;
-    line-height: 32px;
-    height: 32px;
-    width: 100%;
-    cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu .firstlevel .licheckbox {
-    margin-right: 10px;
-    margin-top: 8px;
-  }
-  .menu input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    background-color: #fff;
-    -webkit-appearance: none;
-    border: 1px solid #c9c9c9;
-    border-radius: 2px;
-    outline: none;
-  }
-  .menu .menucheckbox.licheckbox {
-    border-radius: 50%;
-  }
-  .menu input[type="checkbox"]:checked {
-    background: #f2695e url("../../assets/image/icons/select.png") no-repeat
-    center;
-    border: none;
-    background-size: 20px 20px;
-  }
-  .firstlevel.checkallli {
-    line-height: 30px;
-    height: 30px;
-  }
-  .firstlevel.checkallli span:first-child {
-    font-size: 16px;
-    color: #31bc90;
-    font-weight: 400;
-  }
-  .firstlevel.checkallli span.checkallbox input[type="checkbox"] {
-    /* margin-top: 16px; */
-  }
-  .checkallbox {
-    float: right;
-    margin-right: 10px;
-  }
-  .menu .ullisty:hover {
-    background: #f8f8f8;
-  }
-  .menu .ullisty .check-item-option {
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-  }
-  .menu .ullisty .el-dropdown-wapper {
-    opacity: 0;
-  }
-  .menu .ullisty:hover .el-dropdown-wapper {
-    opacity: 1;
-  }
-  .del-menu-tips-wapper .el-dialog__header {
-    background: #31bc90;
-  }
-  .del-menu-tips-wapper .el-dialog__header .el-dialog__title,
-  .del-menu-tips-wapper
-  .el-dialog__header
-  .el-dialog__headerbtn
-  .el-dialog__close {
-    color: #fff;
-  }
-  .del-menu-tips-wapper .el-button--danger:hover {
-    color: #fff;
-    background-color: #f56c6c;
-    border-color: #f56c6c;
-    opacity: 0.7;
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
-    0 2px 4px 0 rgba(232, 237, 250, 0.5);
-  }
-  .del-menu-tips-wapper .el-button--default:hover {
-    color: #31bc90;
-    border-color: #31bc90;
-  }
-  .ppt .right .ppt-wapper {
-    position: relative;
-  }
-  .ppt .right .ppt-wapper .ppt-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 90px;
-    height: 24px;
-    line-height: 24px;
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    z-index: -99;
-    transform: translateX(100%);
-    transition: all 0.5s;
-    opacity: 0;
-    background: url("../../assets/image/badge.png") no-repeat center;
-  }
-  .ppt .right .ppt-wapper .ppt-badge-active {
-    opacity: 1;
-    z-index: 99;
-    transform: translateX(0);
-  }
-  .insert-media-wapper {
-    margin-top: 52px;
-    display: flex;
-  }
-  .insert-media-wapper .media-item {
-    position: relative;
-    flex: 1 1 auto;
-    width: 120px;
-    height: 120px;
-    border: 1px solid #efefef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
-  }
-  .insert-media-wapper .media-item:not(:last-child) {
-    margin-right: 10px;
-  }
-  .insert-media-wapper .media-item .media-image {
-    width: 60px;
-    height: 60px;
-  }
-  .insert-media-wapper .media-item .media-title {
-    margin-top: 8px;
-  }
-  .insert-media-wapper .media-item .media-subtitle {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.54);
-  }
-  .insert-media-wapper .media-item .media-mask {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    transition: all 0.4s;
-    padding: 0 12px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 4px;
-    opacity: 0;
-  }
-  .insert-media-wapper .media-item:hover .media-mask {
-    height: 100%;
-    opacity: 1;
-  }
-  .insert-media-wapper .media-item:hover .media-mask .el-button + .el-button {
-    margin-top: 12px;
-    margin-left: 0;
-  }
-  .insert-media-wapper .media-item .media-mask .uploadonly .uploadbtn {
-    justify-content: flex-start !important;
-  }
-  .ppt ul.edit-page-wapper li .page-tool {
-    display: flex;
-    bottom: 0;
-    height: 0;
-    padding: 0 6px;
-    align-items: center;
-    font-size: 14px;
-    transition: all 0.4s;
-    opacity: 0;
-  }
-  .ppt ul.edit-page-wapper li .page-tool i {
-    flex: 1;
-    font-weight: bold;
-  }
-  .ppt ul.edit-page-wapper li:hover .page-tool {
-    height: 24px;
-    opacity: 1;
-  }
-  .ghost {
-    opacity: 0.5;
-    background: #c8ebfb;
-  }
-  .issue-box {
-    margin: 60px 0 20px 0;
-  }
-  .ppt .page li.noPagePpt {
-    width: 99%;
-    text-align: center;
-    margin-top: 130%;
-    font-size: 16px;
-    color: #999;
-  }
-  .noPagePpt span {
-    font-size: 14px;
-  }
-
-  .noPagePpt {
-    width: 99%;
-    text-align: center;
-    margin-top: 130%;
-    font-size: 16px;
-    color: #999;
-    display: none;
-  }
-  .playerbox {
-    position: relative;
-  }
-  .playerbox::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    /* left: calc(100% - 60px); */
-    /* left:calc(18% - 82px); */
-    /* top: calc(100% - 65px); */
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 30px solid #fff;
-    top:calc(50% - 14px);
-    left:calc(1%);
-
-    right: 0;
-    margin:auto;
-  }
-  .playerbox::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    /* left: calc(100% - 80px); */
-    /* left:calc(3%); */
-    /* top: calc(100% - 80px); */
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    margin: auto;
-  }
-  .playerbox.hideAB::after,
-  .playerbox.hideAB::before {
-    display: none;
-  }
-  .el-input--suffix .el-input__inner{padding-right: 40px;}
-}
