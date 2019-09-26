@@ -90,7 +90,6 @@
 }
 .titleShow{
     color:#31bc90;
-    /* font-weight: 600; */
 }
 .sort .el-button{border:none;padding:0 11px;height: 34px;line-height: 34px;margin-top:3px;cursor:pointer;}
 .sortclick{color: #31bc90;font-weight: 800;}
