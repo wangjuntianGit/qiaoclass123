@@ -160,7 +160,7 @@ export default {
     .el-main {
       margin-top: 20px;
       background: #fff;
-      padding: 0 20px 40px 20px !important;
+      padding: 0 20px 34px 20px !important;
       .box {
         background: #fff;
         padding-top: 20px;
