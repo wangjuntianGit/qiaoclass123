@@ -1375,7 +1375,7 @@
   .fullscreen .canvas div {
     font-size: 12px;
   }
-  .fullscreen  .upPage,.downPage{
+  .fullscreen  >.upPage,.downPage{
        position:absolute;
        z-index:100;
        width:50px;
@@ -1389,11 +1389,11 @@
        text-align:center;
        color:#ffffff;
   }
-  .fullscreen .downPage{
+  .fullscreen >.downPage{
       right:25px;
       padding-left:5px
   }
-  .fullscreen .upPage{
+  .fullscreen >.upPage{
       left:25px;
       padding-right:5px;
   }
