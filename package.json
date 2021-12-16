@@ -22,7 +22,7 @@
     "jquery": "^2.2.1",
     "mockjs": "^1.0.1-beta3",
     "moxie": "0.0.0",
-    "plupload": "^2.3.6",
+    "plupload": "^2.3.9",
     "sass-resources-loader": "^2.0.1",
     "store": "^2.0.12",
     "uuid": "^3.3.3",
